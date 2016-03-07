@@ -70,7 +70,7 @@ htmlcov
 
 #java ignore
 
-
+algs4-data/
 *.bak
 *.vm
 #svn
