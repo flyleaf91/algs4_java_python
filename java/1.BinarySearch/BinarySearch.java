@@ -23,8 +23,7 @@
  *  
  ******************************************************************************/
 
-package edu.princeton.cs.algs4;
-
+//package edu.princeton.cs.algs4;
 import java.util.Arrays;
 
 /**
