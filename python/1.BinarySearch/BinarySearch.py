@@ -1,6 +1,6 @@
 #!usr/bin/python#coding=utf-8
-#二分查找
-#执行方式: python BinarySearch.py 白名单 数据
+#浜屽垎鏌ユ壘
+#鎵ц鏂瑰紡: python BinarySearch.py tinyW.txt < tinyT.txt
 
 import sys
 
