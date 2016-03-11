@@ -1,4 +1,5 @@
 #!usr/bin/python#coding=utf-8
+# readInt 读取文件中的所有整数
 
 import sys
 
@@ -7,6 +8,8 @@ def readInt(filename):
     with open(filename,'r')as f:
         for line in f:
             result.append(int(line))
-        print(result)
+        return result
 
-readInt(sys.argv[1])
+if __name__ == "__main__":
+
+	print(readInt(sys.argv[1]))
