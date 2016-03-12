@@ -14,28 +14,22 @@ def BinarySearch(whileList,keyIn):
 	#必须是升序序列才能使用二分查找
 	whileList.sort()
 	print(whileListIn)
+	print("keyIn={}".format(keyIn)) 
 
 	lo=0
 	hi=len(whileList)-1
-	while lo < hi :
-		mid = (hi+lo)//2
-		print("lo={0},hi={1},mid={2}".format(lo,hi,mid))
-		print("keyIn={},whileListIn[mid]={}".format(keyIn,whileListIn[mid]))
+	while lo <= hi :
+		mid =lo + (hi-lo)//2
 
 		if whileList[mid] == keyIn:
-			print("keyIn found! mid = ",mid)
 			return mid
 		elif whileList[mid] < keyIn:
-			print("<")
-			lo = mid		
+			lo = mid+1		
 		else:
-			print(">")
-			hi = mid 
+			hi = mid-1 
 
-		print(lo,hi,mid)
 
 	else:
-		print("keyIn not found!")
 		return -1
 
 
@@ -51,7 +45,11 @@ if __name__ == '__main__':
 	while True:
 		try:
 			keyIn=int(input())
-			t = BinarySearch(whileListIn,keyIn)
+			result = BinarySearch(whileListIn,keyIn)
+			if result != -1:
+				print("keyIn found! result = ",result)
+			else:	
+				print("keyIn not found!")
 		except EOFError:
 			print("Task excute is finish!")
 			break
